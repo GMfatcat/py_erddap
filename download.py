@@ -10,6 +10,8 @@ import time
 import pprint # for pretty printing dictionaires
 import pandas as pd
 import requests
+import asyncio # for asyncio (experimental)
+import aiohttp # for asyncio with scraping(experimental)
 import os
 from download_setting import * # Initial Settings
 # =================================== #
@@ -70,7 +72,7 @@ def show_dataset(pandas_df = True):
 	if pandas_df:
 		df = pd.DataFrame(support_df)
 		#df = df[df.Dataset != ''] # get rid of unfinish rows --> onl used in developing stage
-		print(f"\nCurrent supported dataset: {len(df)} --> Not support for dataset with depth for now")
+		print(f"\nCurrent supported dataset: {len(df)} --> Not supported dataset for lacking historical data for now")
 		return df
 
 	else:
@@ -141,9 +143,20 @@ class Downloader:
 		MAX_LAT = str(condition_dict.get('lat_range')[1])
 		MIN_LONG = str(condition_dict.get('long_range')[0])
 		MAX_LONG = str(condition_dict.get('long_range')[1])
+		# Check whether depth is in our dict
+		# last_n_keywords for later for loop
+		if 'depth' in condition_dict.keys():
+			last_n_keywords = 5 # dict with depth
+			MIN_DEPTH = str(condition_dict.get('depth')[0])
+			MAX_DEPTH = str(condition_dict.get('depth')[1])
+			cond_url_depth = '%5D%5B(' + MIN_DEPTH + ')' +  f':{def_stride}:' + '('+ MAX_DEPTH +')'
+		else:
+			last_n_keywords = 4 # dict without depth
+			cond_url_depth = ''
+
 		cond_url_date = '%5B' + START_DATE + f':{def_stride}:' + END_DATE
 		cond_url_loc = '%5D%5B(' + MIN_LAT + ')'+ f':{def_stride}:' +'(' + MAX_LAT +')%5D%5B(' + MIN_LONG + ')'+ f':{def_stride}:'+ '(' + MAX_LONG + ')%5D'
-		cond_full_url = cond_url_date + cond_url_loc
+		cond_full_url = cond_url_date + cond_url_depth + cond_url_loc
 
 		# Generate output filename
 		output_filename = self.define_filename(cond_full_url,file_suffix)
@@ -153,7 +166,8 @@ class Downloader:
 		keys_list = [*condition_dict]  # get list of key name of dict
 
 		# Send index into loop for condition check except the last four keywords: time & location
-		for i in range(len(condition_dict)-4):
+		# It will be last five keywords if depth is involved --(SWAN Dataset)
+		for i in range(len(condition_dict)-last_n_keywords):
 			if condition_dict.get(keys_list[i]):
 				if First_index_added:
 				    output_url += ',' + keys_list[i] + cond_full_url  # since first index involved, just add ','
@@ -199,5 +213,43 @@ class Downloader:
 						self.filepath = file
 
 		except Exception as e:
-			print('Exception in downloading:', e)
+			print(f'Exception in downloading{r.status_code}:', e)
 
+# =================================== #
+# Experimental Downloader with asyncio --- Error --- Can Run but Wrong Results
+async def job(session,cls,return_filepath = True):
+	r = await session.get(cls.download_url)
+	file = os.path.join(cls.saving_dir,cls.filename)
+	# saveflag: 'wb' or 'w'
+	with open(file, cls.saveflag) as f:
+		f.write(r.content)
+		print(cls.filename, 'in',round(time.time() - t0,2),'sec')
+		if return_filepath:
+			cls.filepath = file
+
+
+async def main(loop,downloader_list):
+	print("Request Status | Filename | Finish Time")
+	async with aiohttp.ClientSession() as session:
+		tasks = [loop.create_task(job(session,cls = downloader)) for downloader in downloader_list]
+		finished, unfinished = await asyncio.wait(tasks)
+		#all_results = [r.result() for r in finished]
+		#print(all_results)
+
+# Send all the downloader to the function
+def async_download(*args):
+	import nest_asyncio
+	nest_asyncio.apply()
+	# Step 1 : Gather all downloader and add to a list
+	all_downloader = locals() #get all passed values
+	downloader_list = []
+	for dl in all_downloader['args']:
+		downloader_list.append(dl)
+
+	print(downloader_list)
+	# Start async download
+	t1 = time.time()
+	loop = asyncio.get_event_loop()
+	loop.run_until_complete(main(loop,downloader_list = downloader_list))
+	# loop.close()  # Ipython notebook gives error if close loop
+	print("Async total time:", time.time() - t1)

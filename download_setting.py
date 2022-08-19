@@ -7,6 +7,8 @@ INIT_LAT_RANGE = [0,30]
 INIT_LON_RANGE = [118,150]
 INIT_ST_DATE = '(2022-04-25T12:00:00Z)'
 INIT_ED_DATE = '(2022-04-30T12:00:00Z)'
+# Special Case: SWAN got depth
+INIT_DEPTH = [0.0,0.0]
 # =================================== #
 # Support Format
 plain_format = ['.csv','.html','.htmlTable','.json',
@@ -809,7 +811,8 @@ swanbg_dict = {'mdir': True,
             'start_date':INIT_ST_DATE,
             'end_date':INIT_ED_DATE,
             'lat_range':INIT_LAT_RANGE,
-            'long_range':INIT_LON_RANGE
+            'long_range':INIT_LON_RANGE,
+            'depth':INIT_DEPTH
             }
 
 # =================================== #
@@ -833,7 +836,8 @@ swangu_dict = {'mdir': True,
             'start_date':INIT_ST_DATE,
             'end_date':INIT_ED_DATE,
             'lat_range':INIT_LAT_RANGE,
-            'long_range':INIT_LON_RANGE
+            'long_range':INIT_LON_RANGE,
+            'depth':INIT_DEPTH
             }
 
 # =================================== #
@@ -857,7 +861,8 @@ swanap_dict = {'mdir': True,
             'start_date':INIT_ST_DATE,
             'end_date':INIT_ED_DATE,
             'lat_range':INIT_LAT_RANGE,
-            'long_range':INIT_LON_RANGE
+            'long_range':INIT_LON_RANGE,
+            'depth':INIT_DEPTH
             }
 
 # =================================== #
@@ -881,7 +886,8 @@ swanka_dict = {'mdir': True,
             'start_date':INIT_ST_DATE,
             'end_date':INIT_ED_DATE,
             'lat_range':INIT_LAT_RANGE,
-            'long_range':INIT_LON_RANGE
+            'long_range':INIT_LON_RANGE,
+            'depth':INIT_DEPTH
             }
 
 # =================================== #
@@ -905,7 +911,8 @@ swanma_dict = {'mdir': True,
             'start_date':INIT_ST_DATE,
             'end_date':INIT_ED_DATE,
             'lat_range':INIT_LAT_RANGE,
-            'long_range':INIT_LON_RANGE
+            'long_range':INIT_LON_RANGE,
+            'depth':INIT_DEPTH
             }
 
 # =================================== #
@@ -929,7 +936,8 @@ swanmaui_dict = {'mdir': True,
             'start_date':INIT_ST_DATE,
             'end_date':INIT_ED_DATE,
             'lat_range':INIT_LAT_RANGE,
-            'long_range':INIT_LON_RANGE
+            'long_range':INIT_LON_RANGE,
+            'depth':INIT_DEPTH
             }
 
 # =================================== #
@@ -953,7 +961,8 @@ swanoh_dict = {'mdir': True,
             'start_date':INIT_ST_DATE,
             'end_date':INIT_ED_DATE,
             'lat_range':INIT_LAT_RANGE,
-            'long_range':INIT_LON_RANGE
+            'long_range':INIT_LON_RANGE,
+            'depth':INIT_DEPTH
             }
 
 # =================================== #
@@ -977,7 +986,8 @@ swanro_dict = {'mdir': True,
             'start_date':INIT_ST_DATE,
             'end_date':INIT_ED_DATE,
             'lat_range':INIT_LAT_RANGE,
-            'long_range':INIT_LON_RANGE
+            'long_range':INIT_LON_RANGE,
+            'depth':INIT_DEPTH
             }
 
 # =================================== #
@@ -1001,7 +1011,8 @@ swansa_dict = {'mdir': True,
             'start_date':INIT_ST_DATE,
             'end_date':INIT_ED_DATE,
             'lat_range':INIT_LAT_RANGE,
-            'long_range':INIT_LON_RANGE
+            'long_range':INIT_LON_RANGE,
+            'depth':INIT_DEPTH
             }
 
 # =================================== #
@@ -1025,7 +1036,8 @@ swantu_dict = {'mdir': True,
             'start_date':INIT_ST_DATE,
             'end_date':INIT_ED_DATE,
             'lat_range':INIT_LAT_RANGE,
-            'long_range':INIT_LON_RANGE
+            'long_range':INIT_LON_RANGE,
+            'depth':INIT_DEPTH
             }
 
 # TBD : Add more datasets inside --> Non-historic dataset
