@@ -1040,6 +1040,440 @@ swantu_dict = {'mdir': True,
             'depth':INIT_DEPTH
             }
 
+# =================================== #
+'''
+Dataset Name: Surface CUrrents from a Diagnostic model (SCUD): Pacific
+Index Information: https://pae-paha.pacioos.hawaii.edu/erddap/griddap/scud_pac.html
+===================================
+u (sea water velocity: eastward component, meter second-1)
+v (sea water velocity: northward component, meter second-1)
+'''
+scudp_org_url = 'https://pae-paha.pacioos.hawaii.edu/erddap/griddap/scud_pac.nc?'
+
+scudp_dict = {'u': True,
+            'v':True,
+            'start_date':INIT_ST_DATE,
+            'end_date':INIT_ED_DATE,
+            'lat_range':INIT_LAT_RANGE,
+            'long_range':INIT_LON_RANGE,
+            }
+
+# =================================== #
+'''
+Dataset Name: Surface CUrrents from a Diagnostic model (SCUD): Pacific, Lon+/-180
+Index Information: https://pae-paha.pacioos.hawaii.edu/erddap/griddap/scud_pac_lon180.html
+===================================
+u (sea water velocity: eastward component, meter second-1)
+v (sea water velocity: northward component, meter second-1)
+'''
+scudp180_org_url = 'https://pae-paha.pacioos.hawaii.edu/erddap/griddap/scud_pac_lon180.nc?'
+
+scudp180_dict = {'u': True,
+            'v':True,
+            'start_date':INIT_ST_DATE,
+            'end_date':INIT_ED_DATE,
+            'lat_range':INIT_LAT_RANGE,
+            'long_range':INIT_LON_RANGE,
+            }
+
+# =================================== #
+'''
+Dataset Name: Tide Model (Barotropic) for the Pacific Ocean: Tidal Elevation
+Index Information: https://pae-paha.pacioos.hawaii.edu/erddap/griddap/tide_pac.html
+===================================
+ssh (tidal elevation, meters)
+'''
+tidep_org_url = 'https://pae-paha.pacioos.hawaii.edu/erddap/griddap/tide_pac.nc?'
+
+tidep_dict = {'ssh': True,
+            'start_date':INIT_ST_DATE,
+            'end_date':INIT_ED_DATE,
+            'lat_range':INIT_LAT_RANGE,
+            'long_range':INIT_LON_RANGE,
+            }
+
+# =================================== #
+'''
+Dataset Name: Tide Model (Barotropic) for the Pacific Ocean: Tidal Elevation, Lon+/-180
+Index Information: https://pae-paha.pacioos.hawaii.edu/erddap/griddap/tide_pac_lon180.html
+===================================
+ssh (tidal elevation, meters)
+'''
+tidep180_org_url = 'https://pae-paha.pacioos.hawaii.edu/erddap/griddap/tide_pac_lon180.nc?'
+
+tidep180_dict = {'ssh': True,
+            'start_date':INIT_ST_DATE,
+            'end_date':INIT_ED_DATE,
+            'lat_range':INIT_LAT_RANGE,
+            'long_range':INIT_LON_RANGE,
+            }
+
+# =================================== #
+'''
+Dataset Name: Tide Model (Barotropic) for the Pacific Ocean: Tidal Velocity
+Index Information: https://pae-paha.pacioos.hawaii.edu/erddap/griddap/tide_pac_vel.html
+===================================
+u (u-velocity component, meter second-1)
+v (v-velocity component, meter second-1)
+'''
+tidepv_org_url = 'https://pae-paha.pacioos.hawaii.edu/erddap/griddap/tide_pac_vel.nc?'
+
+tidepv_dict = {'u': True,
+            'v':True,
+            'start_date':INIT_ST_DATE,
+            'end_date':INIT_ED_DATE,
+            'lat_range':INIT_LAT_RANGE,
+            'long_range':INIT_LON_RANGE,
+            'depth':INIT_DEPTH
+            }
+
+# =================================== #
+'''
+Dataset Name: Tide Model (Barotropic) for the Pacific Ocean: Tidal Velocity, Lon+/-180
+Index Information: https://pae-paha.pacioos.hawaii.edu/erddap/griddap/tide_pac_vel_lon180.html
+===================================
+u (u-velocity component, meter second-1)
+v (v-velocity component, meter second-1)
+'''
+tidepv180_org_url = 'https://pae-paha.pacioos.hawaii.edu/erddap/griddap/tide_pac_vel_lon180.nc?'
+
+tidepv180_dict = {'u': True,
+            'v':True,
+            'start_date':INIT_ST_DATE,
+            'end_date':INIT_ED_DATE,
+            'lat_range':INIT_LAT_RANGE,
+            'long_range':INIT_LON_RANGE,
+            'depth':INIT_DEPTH
+            }
+
+# =================================== #
+'''
+Dataset Name: Tide Model for the Big Island of Hawaii: Tidal Elevation
+Index Information: https://pae-paha.pacioos.hawaii.edu/erddap/griddap/tide_bi.html
+===================================
+ssh (tidal elevation, meters)
+'''
+tidebi_org_url = 'https://pae-paha.pacioos.hawaii.edu/erddap/griddap/tide_bi.nc?'
+
+tidebi_dict = {'ssh': True,
+            'start_date':INIT_ST_DATE,
+            'end_date':INIT_ED_DATE,
+            'lat_range':INIT_LAT_RANGE,
+            'long_range':INIT_LON_RANGE,
+            }
+
+# =================================== #
+'''
+Dataset Name: Tide Model for the Hawaiian Islands: Main NW Islands: Tidal Elevation
+Index Information: https://pae-paha.pacioos.hawaii.edu/erddap/griddap/tide_mhi.html
+===================================
+ssh (tidal elevation, meters)
+'''
+tidemhi_org_url = 'https://pae-paha.pacioos.hawaii.edu/erddap/griddap/tide_mhi.nc?'
+
+tidemhi_dict = {'ssh': True,
+            'start_date':INIT_ST_DATE,
+            'end_date':INIT_ED_DATE,
+            'lat_range':INIT_LAT_RANGE,
+            'long_range':INIT_LON_RANGE,
+            }
+
+# =================================== #
+'''
+Dataset Name: WaveWatch III (WW3) Global Wave Model
+Index Information: https://pae-paha.pacioos.hawaii.edu/erddap/griddap/ww3_global.html
+===================================
+Tdir (peak wave direction, degrees)
+Tper (peak wave period, second)
+Thgt (significant wave height, meters)
+sdir (swell peak wave direction, degrees)
+sper (swell peak wave period, seconds)
+shgt (swell significant wave height, meters)
+wdir (wind peak wave direction, degrees)
+wper (wind peak wave period, seconds)
+whgt (wind significant wave height, meters)
+'''
+ww3g_org_url = 'https://pae-paha.pacioos.hawaii.edu/erddap/griddap/ww3_global.nc?'
+
+ww3g_dict = {'Tdir': True,
+            'Tper':True,
+            'Thgt':True,
+            'sdir':True,
+            'sper':True,
+            'shgt':True,
+            'wdir':True,
+            'wper':True,
+            'whgt':True,
+            'start_date':INIT_ST_DATE,
+            'end_date':INIT_ED_DATE,
+            'lat_range':INIT_LAT_RANGE,
+            'long_range':INIT_LON_RANGE,
+            'depth':INIT_DEPTH
+            }
+
+# =================================== #
+'''
+Dataset Name: WaveWatch III (WW3) Global Wave Model, Lon+/-180
+Index Information: https://pae-paha.pacioos.hawaii.edu/erddap/griddap/ww3_global_lon180.html
+===================================
+Tdir (peak wave direction, degrees)
+Tper (peak wave period, second)
+Thgt (significant wave height, meters)
+sdir (swell peak wave direction, degrees)
+sper (swell peak wave period, seconds)
+shgt (swell significant wave height, meters)
+wdir (wind peak wave direction, degrees)
+wper (wind peak wave period, seconds)
+whgt (wind significant wave height, meters)
+'''
+ww3g180_org_url = 'https://pae-paha.pacioos.hawaii.edu/erddap/griddap/ww3_global_lon180.nc?'
+
+ww3g180_dict = {'Tdir': True,
+            'Tper':True,
+            'Thgt':True,
+            'sdir':True,
+            'sper':True,
+            'shgt':True,
+            'wdir':True,
+            'wper':True,
+            'whgt':True,
+            'start_date':INIT_ST_DATE,
+            'end_date':INIT_ED_DATE,
+            'lat_range':INIT_LAT_RANGE,
+            'long_range':INIT_LON_RANGE,
+            'depth':INIT_DEPTH
+            }
+
+# =================================== #
+'''
+Dataset Name: WaveWatch III (WW3) Hawaii Regional Wave Model
+Index Information: https://pae-paha.pacioos.hawaii.edu/erddap/griddap/ww3_hawaii.html
+===================================
+Tdir (peak wave direction, degrees)
+Tper (peak wave period, second)
+Thgt (significant wave height, meters)
+sdir (swell peak wave direction, degrees)
+sper (swell peak wave period, seconds)
+shgt (swell significant wave height, meters)
+wdir (wind peak wave direction, degrees)
+wper (wind peak wave period, seconds)
+whgt (wind significant wave height, meters)
+'''
+ww3h_org_url = 'https://pae-paha.pacioos.hawaii.edu/erddap/griddap/ww3_hawaii.nc?'
+
+ww3h_dict = {'Tdir': True,
+            'Tper':True,
+            'Thgt':True,
+            'sdir':True,
+            'sper':True,
+            'shgt':True,
+            'wdir':True,
+            'wper':True,
+            'whgt':True,
+            'start_date':INIT_ST_DATE,
+            'end_date':INIT_ED_DATE,
+            'lat_range':INIT_LAT_RANGE,
+            'long_range':INIT_LON_RANGE,
+            'depth':INIT_DEPTH
+            }
+
+# =================================== #
+'''
+Dataset Name: WaveWatch III (WW3) Hawaii Regional Wave Model, Lon+/-180
+Index Information: https://pae-paha.pacioos.hawaii.edu/erddap/griddap/ww3_hawaii_lon180.html
+===================================
+Tdir (peak wave direction, degrees)
+Tper (peak wave period, second)
+Thgt (significant wave height, meters)
+sdir (swell peak wave direction, degrees)
+sper (swell peak wave period, seconds)
+shgt (swell significant wave height, meters)
+wdir (wind peak wave direction, degrees)
+wper (wind peak wave period, seconds)
+whgt (wind significant wave height, meters)
+'''
+ww3h180_org_url = 'https://pae-paha.pacioos.hawaii.edu/erddap/griddap/ww3_hawaii_lon180.nc?'
+
+ww3h180_dict = {'Tdir': True,
+            'Tper':True,
+            'Thgt':True,
+            'sdir':True,
+            'sper':True,
+            'shgt':True,
+            'wdir':True,
+            'wper':True,
+            'whgt':True,
+            'start_date':INIT_ST_DATE,
+            'end_date':INIT_ED_DATE,
+            'lat_range':INIT_LAT_RANGE,
+            'long_range':INIT_LON_RANGE,
+            'depth':INIT_DEPTH
+            }
+
+# =================================== #
+'''
+Dataset Name: WaveWatch III (WW3) Mariana Regional Wave Model
+Index Information: https://pae-paha.pacioos.hawaii.edu/erddap/griddap/ww3_mariana.html
+===================================
+Tdir (peak wave direction, degrees)
+Tper (peak wave period, second)
+Thgt (significant wave height, meters)
+sdir (swell peak wave direction, degrees)
+sper (swell peak wave period, seconds)
+shgt (swell significant wave height, meters)
+wdir (wind peak wave direction, degrees)
+wper (wind peak wave period, seconds)
+whgt (wind significant wave height, meters)
+'''
+ww3ma_org_url = 'https://pae-paha.pacioos.hawaii.edu/erddap/griddap/ww3_mariana.nc?'
+
+ww3ma_dict = {'Tdir': True,
+            'Tper':True,
+            'Thgt':True,
+            'sdir':True,
+            'sper':True,
+            'shgt':True,
+            'wdir':True,
+            'wper':True,
+            'whgt':True,
+            'start_date':INIT_ST_DATE,
+            'end_date':INIT_ED_DATE,
+            'lat_range':INIT_LAT_RANGE,
+            'long_range':INIT_LON_RANGE,
+            'depth':INIT_DEPTH
+            }
+
+# =================================== #
+'''
+Dataset Name: WaveWatch III (WW3) Northwestern Hawaiian Islands (NWHI) Regional Wave Model
+Index Information: https://pae-paha.pacioos.hawaii.edu/erddap/griddap/ww3_nwhi.html
+===================================
+Tdir (peak wave direction, degrees)
+Tper (peak wave period, second)
+Thgt (significant wave height, meters)
+sdir (swell peak wave direction, degrees)
+sper (swell peak wave period, seconds)
+shgt (swell significant wave height, meters)
+wdir (wind peak wave direction, degrees)
+wper (wind peak wave period, seconds)
+whgt (wind significant wave height, meters)
+'''
+ww3nwhi_org_url = 'https://pae-paha.pacioos.hawaii.edu/erddap/griddap/ww3_nwhi.nc?'
+
+ww3nwhi_dict = {'Tdir': True,
+            'Tper':True,
+            'Thgt':True,
+            'sdir':True,
+            'sper':True,
+            'shgt':True,
+            'wdir':True,
+            'wper':True,
+            'whgt':True,
+            'start_date':INIT_ST_DATE,
+            'end_date':INIT_ED_DATE,
+            'lat_range':INIT_LAT_RANGE,
+            'long_range':INIT_LON_RANGE,
+            'depth':INIT_DEPTH
+            }
+
+# =================================== #
+'''
+Dataset Name: WaveWatch III (WW3) Northwestern Hawaiian Islands (NWHI) Regional Wave Model, Lon+/-180
+Index Information: https://pae-paha.pacioos.hawaii.edu/erddap/griddap/ww3_nwhi_lon180.html
+===================================
+Tdir (peak wave direction, degrees)
+Tper (peak wave period, second)
+Thgt (significant wave height, meters)
+sdir (swell peak wave direction, degrees)
+sper (swell peak wave period, seconds)
+shgt (swell significant wave height, meters)
+wdir (wind peak wave direction, degrees)
+wper (wind peak wave period, seconds)
+whgt (wind significant wave height, meters)
+'''
+ww3nwhi180_org_url = 'https://pae-paha.pacioos.hawaii.edu/erddap/griddap/ww3_nwhi_lon180.nc?'
+
+ww3nwhi180_dict = {'Tdir': True,
+            'Tper':True,
+            'Thgt':True,
+            'sdir':True,
+            'sper':True,
+            'shgt':True,
+            'wdir':True,
+            'wper':True,
+            'whgt':True,
+            'start_date':INIT_ST_DATE,
+            'end_date':INIT_ED_DATE,
+            'lat_range':INIT_LAT_RANGE,
+            'long_range':INIT_LON_RANGE,
+            'depth':INIT_DEPTH
+            }
+
+# =================================== #
+'''
+Dataset Name: WaveWatch III (WW3) Samoa Regional Wave Model
+Index Information: https://pae-paha.pacioos.hawaii.edu/erddap/griddap/ww3_samoa.html
+===================================
+Tdir (peak wave direction, degrees)
+Tper (peak wave period, second)
+Thgt (significant wave height, meters)
+sdir (swell peak wave direction, degrees)
+sper (swell peak wave period, seconds)
+shgt (swell significant wave height, meters)
+wdir (wind peak wave direction, degrees)
+wper (wind peak wave period, seconds)
+whgt (wind significant wave height, meters)
+'''
+ww3sa_org_url = 'https://pae-paha.pacioos.hawaii.edu/erddap/griddap/ww3_samoa.nc?'
+
+ww3sa_dict = {'Tdir': True,
+            'Tper':True,
+            'Thgt':True,
+            'sdir':True,
+            'sper':True,
+            'shgt':True,
+            'wdir':True,
+            'wper':True,
+            'whgt':True,
+            'start_date':INIT_ST_DATE,
+            'end_date':INIT_ED_DATE,
+            'lat_range':INIT_LAT_RANGE,
+            'long_range':INIT_LON_RANGE,
+            'depth':INIT_DEPTH
+            }
+
+# =================================== #
+'''
+Dataset Name: WaveWatch III (WW3) Samoa Regional Wave Model, Lon+/-180
+Index Information: https://pae-paha.pacioos.hawaii.edu/erddap/griddap/ww3_samoa_lon180.html
+===================================
+Tdir (peak wave direction, degrees)
+Tper (peak wave period, second)
+Thgt (significant wave height, meters)
+sdir (swell peak wave direction, degrees)
+sper (swell peak wave period, seconds)
+shgt (swell significant wave height, meters)
+wdir (wind peak wave direction, degrees)
+wper (wind peak wave period, seconds)
+whgt (wind significant wave height, meters)
+'''
+ww3sa180_org_url = 'https://pae-paha.pacioos.hawaii.edu/erddap/griddap/ww3_samoa_lon180.nc?'
+
+ww3sa180_dict = {'Tdir': True,
+            'Tper':True,
+            'Thgt':True,
+            'sdir':True,
+            'sper':True,
+            'shgt':True,
+            'wdir':True,
+            'wper':True,
+            'whgt':True,
+            'start_date':INIT_ST_DATE,
+            'end_date':INIT_ED_DATE,
+            'lat_range':INIT_LAT_RANGE,
+            'long_range':INIT_LON_RANGE,
+            'depth':INIT_DEPTH
+            }
 # TBD : Add more datasets inside --> Non-historic dataset
 
 # =================================== #
@@ -1085,7 +1519,24 @@ datasetName = ['NOAA/NCEP Global Forecast System (GFS) Atmospheric Model',
                'Simulating WAves Nearshore (SWAN) Regional Wave Model: Oahu',
                'Simulating WAves Nearshore (SWAN) Regional Wave Model: Rota, CNMI',
                'Simulating WAves Nearshore (SWAN) Regional Wave Model: Saipan, CNMI',
-               'Simulating WAves Nearshore (SWAN) Regional Wave Model: Tutuila, American Samoa']
+               'Simulating WAves Nearshore (SWAN) Regional Wave Model: Tutuila, American Samoa',
+               'Surface CUrrents from a Diagnostic model (SCUD): Pacific',
+               'Surface CUrrents from a Diagnostic model (SCUD): Pacific, Lon+/-180',
+               'Tide Model (Barotropic) for the Pacific Ocean: Tidal Elevation',
+               'Tide Model (Barotropic) for the Pacific Ocean: Tidal Elevation, Lon+/-180',
+               'Tide Model (Barotropic) for the Pacific Ocean: Tidal Velocity',
+               'Tide Model (Barotropic) for the Pacific Ocean: Tidal Velocity, Lon+/-180',
+               'Tide Model for the Big Island of Hawaii: Tidal Elevation',
+               'Tide Model for the Big Island of Hawaii: Main NW Islands: Tidal Elevation',
+               'WaveWatch III (WW3) Global Wave Model',
+               'WaveWatch III (WW3) Global Wave Model, Lon+/-180',
+               'WaveWatch III (WW3) Hawaii Regional Wave Model',
+               'WaveWatch III (WW3) Hawaii Regional Wave Model, Lon+/-180',
+               'WaveWatch III (WW3) Mariana Regional Wave Model',
+               'WaveWatch III (WW3) Northwestern Hawaiian Islands (NWHI) Regional Wave Model',
+               'WaveWatch III (WW3) Northwestern Hawaiian Islands (NWHI) Regional Wave Model, Lon+/-180',
+               'WaveWatch III (WW3) Samoa Regional Wave Model',
+               'WaveWatch III (WW3) Samoa Regional Wave Model, Lon+/-180']
 
 Informations = ['https://pae-paha.pacioos.hawaii.edu/erddap/griddap/ncep_global.html',
                'https://pae-paha.pacioos.hawaii.edu/erddap/griddap/dhw_5km_monthly.html',
@@ -1128,7 +1579,24 @@ Informations = ['https://pae-paha.pacioos.hawaii.edu/erddap/griddap/ncep_global.
                'https://pae-paha.pacioos.hawaii.edu/erddap/griddap/swan_oahu.html',
                'https://pae-paha.pacioos.hawaii.edu/erddap/griddap/swan_rota.html',
                'https://pae-paha.pacioos.hawaii.edu/erddap/griddap/swan_saipan.html',
-               'https://pae-paha.pacioos.hawaii.edu/erddap/griddap/swan_tutuila.html']
+               'https://pae-paha.pacioos.hawaii.edu/erddap/griddap/swan_tutuila.html',
+               'https://pae-paha.pacioos.hawaii.edu/erddap/griddap/scud_pac.html',
+               'https://pae-paha.pacioos.hawaii.edu/erddap/griddap/scud_pac_lon180.html',
+               'https://pae-paha.pacioos.hawaii.edu/erddap/griddap/tide_pac.html',
+               'https://pae-paha.pacioos.hawaii.edu/erddap/griddap/tide_pac_lon180.html',
+               'https://pae-paha.pacioos.hawaii.edu/erddap/griddap/tide_pac_vel.html',
+               'https://pae-paha.pacioos.hawaii.edu/erddap/griddap/tide_pac_vel_lon180.html',
+               'https://pae-paha.pacioos.hawaii.edu/erddap/griddap/tide_bi.html',
+               'https://pae-paha.pacioos.hawaii.edu/erddap/griddap/tide_mhi.html',
+               'https://pae-paha.pacioos.hawaii.edu/erddap/griddap/ww3_global.html',
+               'https://pae-paha.pacioos.hawaii.edu/erddap/griddap/ww3_global_lon180.html',
+               'https://pae-paha.pacioos.hawaii.edu/erddap/griddap/ww3_hawaii.html',
+               'https://pae-paha.pacioos.hawaii.edu/erddap/griddap/ww3_hawaii_lon180.html',
+               'https://pae-paha.pacioos.hawaii.edu/erddap/griddap/ww3_mariana.html',
+               'https://pae-paha.pacioos.hawaii.edu/erddap/griddap/ww3_nwhi.html',
+               'https://pae-paha.pacioos.hawaii.edu/erddap/griddap/ww3_nwhi_lon180.html',
+               'https://pae-paha.pacioos.hawaii.edu/erddap/griddap/ww3_samoa.html',
+               'https://pae-paha.pacioos.hawaii.edu/erddap/griddap/ww3_samoa_lon180.html']
 
 datasetCode = ['gfs',
                'dhw5',
@@ -1171,7 +1639,24 @@ datasetCode = ['gfs',
                'swanoh',
                'swanro',
                'swansa',
-               'swantu']
+               'swantu',
+               'scudp',
+               'scudp180',
+               'tidep',
+               'tidep180',
+               'tidepv',
+               'tidepv180',
+               'tidebi',
+               'tidemhi',
+               'ww3g',
+               'ww3g180',
+               'ww3h',
+               'ww3h180',
+               'ww3ma',
+               'ww3nwhi',
+               'ww3nwhi180',
+               'ww3sa',
+               'ww3sa180']
 
 # Code specify the code I defined here , it would not be exactly the same as in the ERDDAP website
 support_df = {'Dataset':datasetName,
