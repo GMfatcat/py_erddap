@@ -6,7 +6,7 @@ No need to install it , just add **download.py** and **download_setting.py** to 
 
 ## For those who want get a package ## 
 `
-pip install aaa
+pip install https://github.com/GMfatcat/py_erddap.git
 `
 
 ### New Features TODO LIST
