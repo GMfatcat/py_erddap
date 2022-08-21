@@ -5,7 +5,7 @@ No need to install it , just add download.py and download_setting.py to your cur
 
 ### New Features TODO LIST
 [:x:] Asynico(Failed:bug:)
-- [ ] Multiprocessing Download(Still Working:bicyclist:)
-- [ ] Dataset without historic data(Still Working:bicyclist:)
+- [ ] Multiprocessing Download (Still Working:bicyclist:)
+- [ ] Dataset without historic data (Still Working:bicyclist:)
 
 
