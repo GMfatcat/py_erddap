@@ -3,10 +3,10 @@ Package contains handy and customize tool for downloading data from ERDDAP websi
 
 No need to install it , just add download.py and download_setting.py to your current working directory, and it's ready to go ~
 
-### Solar System Exploration, 1950s – 1960s
+### New Features TODO LIST
 
-- [ ] Mercury
-- [x] Venus
+- [-] Asynico
+- [ ] Multiprocessing Download
 - [x] Earth (Orbit/Moon)
 - [x] Mars
 - [ ] Jupiter
