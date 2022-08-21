@@ -1,4 +1,8 @@
 # py_erddap
+![Status](https://img.shields.io/badge/xarray-needed-brightgreen)
+![Status](https://img.shields.io/badge/netCDF4-needed-brightgreen)
+![Status](https://img.shields.io/badge/requests-needed-critical)
+![Status](https://img.shields.io/badge/aiohttp-needed-brightgreen)  
 Package contains handy and customize tool for downloading grid data from [ERDDAP website](https://pae-paha.pacioos.hawaii.edu/erddap/griddap) with API  
 Inspired by my previous project:[ConvLSTM-CNN-for-tropical-cyclone](https://github.com/GMfatcat/ConvLSTM-CNN-for-tropical-cyclone)  
 Package Icon:<a href="https://www.vecteezy.com/free-vector/dolphin-icon">Dolphin Icon Vectors by Vecteezy</a>
