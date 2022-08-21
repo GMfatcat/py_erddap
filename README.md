@@ -25,4 +25,22 @@ Check **Example_with_depth.ipynb** for dataset *with depth*, ex. `Simulating WAv
 - [ ] Multiprocessing Download (Still Working:bicyclist:)
 - [ ] Dataset without historic data (Still Working:bicyclist:)
 
+## Bugs and feature requests
 
+Have a bug or a feature request? Please first search for existing and closed issues.  
+If your problem or idea is not addressed yet, please open a new issue.  
+
+
+## Creator
+
+**GMfatcat**
+
+- <https://github.com/GMfatcat>
+- <http://homepage.ntu.edu.tw/~r10521801/>
+
+
+## Copyright and license
+
+Code released under the [MIT License](https://reponame/blob/master/LICENSE).
+
+Enjoy :metal:
