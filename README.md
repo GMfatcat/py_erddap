@@ -11,14 +11,15 @@ Package Icon:<a href="https://www.vecteezy.com/free-vector/dolphin-icon">Dolphin
 No need to install it , just add **download.py** and **download_setting.py** to your current working directory  
 :point_right: Import in your script and it's ready to go ~  
 `
+git clone https://github.com/GMfatcat/py_erddap.git
+`  
+`
 from download import *
 `
 
 ## For those who want to get a package:point_down: ##
-*pip package is will be release later (I wish to release at least until Multiprocessing Download works fine)*  
-`
-git clone https://github.com/GMfatcat/py_erddap.git
-`
+*More functional pip package will be release later (I wish to release at least until Multiprocessing Download works fine)*  
+`pip install py-erddap==1.0.1`
 
 ## :white_check_mark: Package Usage ##
 Check **Example.ipynb** for dataset *without depth*, ex. `NOAA/NCEP Global Forecast System (GFS) Atmospheric Model`  
