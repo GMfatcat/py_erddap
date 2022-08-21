@@ -16,7 +16,7 @@ from download import *
 
 ## For those who want to get a package:point_down: ## 
 `
-pip install https://github.com/GMfatcat/py_erddap.git
+git clone https://github.com/GMfatcat/py_erddap.git
 `
 
 ## :white_check_mark: Package Usage ##
