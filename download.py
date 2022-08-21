@@ -13,7 +13,7 @@ import requests
 import asyncio # for asyncio (experimental)
 import aiohttp # for asyncio with scraping(experimental)
 import os
-from download_setting import * # Initial Settings
+from .download_setting import * # Initial Settings
 # =================================== #
 # Decorator function
 #  3 layer of wrapper to take args --> control if there is a return function
