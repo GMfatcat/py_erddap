@@ -14,7 +14,8 @@ No need to install it , just add **download.py** and **download_setting.py** to 
 from download import *
 `
 
-## For those who want to get a package:point_down: ## 
+## For those who want to get a package:point_down: ##
+*pip package is will be release later (I wish to release at least until Multiprocessing Download works fine)*  
 `
 git clone https://github.com/GMfatcat/py_erddap.git
 `
