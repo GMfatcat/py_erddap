@@ -21,7 +21,7 @@ from download import *
 *More functional pip package will be release later (I wish to release at least until Multiprocessing Download works fine)*  
 `pip install py-erddap==1.0.1`
 
-Start using by typing from `py_erddap.download import *`
+Start using by typing `from py_erddap.download import *`
 
 ## :white_check_mark: Package Usage ##
 Check **Example.ipynb** for dataset *without depth*, ex. `NOAA/NCEP Global Forecast System (GFS) Atmospheric Model`  
