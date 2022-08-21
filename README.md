@@ -17,6 +17,8 @@ pip install https://github.com/GMfatcat/py_erddap.git
 ## :white_check_mark: Package Usage ##
 Check **Example.ipynb** for dataset *without depth*, ex. `NOAA/NCEP Global Forecast System (GFS) Atmospheric Model`  
 Check **Example_with_depth.ipynb** for dataset *with depth*, ex. `Simulating WAves Nearshore (SWAN) Regional Wave Model`  
+:orange_book: define_url_and_output_filename() can also choose the file type to save, default to `.nc` 
+`define_url_and_output_filename(saving_dir,suffix,filetype = '.nc',stride = 1)`
 
 ### New Features TODO LIST
 [:x:] Asynico Download (Failed:bug:)
