@@ -1,0 +1,6 @@
+pandas
+xarray
+requests
+pprint
+asyncio
+aiohttp
