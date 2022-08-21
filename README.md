@@ -1,6 +1,7 @@
 # py_erddap
 Package contains handy and customize tool for downloading grid data from [ERDDAP website](https://pae-paha.pacioos.hawaii.edu/erddap/griddap) with API  
-Inspired by my previous project:[ConvLSTM-CNN-for-tropical-cyclone](https://github.com/GMfatcat/ConvLSTM-CNN-for-tropical-cyclone)
+Inspired by my previous project:[ConvLSTM-CNN-for-tropical-cyclone](https://github.com/GMfatcat/ConvLSTM-CNN-for-tropical-cyclone)  
+Package Icon:<a href="https://www.vecteezy.com/free-vector/dolphin-icon">Dolphin Icon Vectors by Vecteezy</a>
 
 ## For those who want to try out:point_down: ##  
 No need to install it , just add **download.py** and **download_setting.py** to your current working directory  
